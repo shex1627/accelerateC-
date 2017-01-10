@@ -1,0 +1,6 @@
+Things i learn:
+1.io buffer concepts, flushing
+2.can't concat a string and a string ilteral
+3.the benefit of start counting from 0, asymmetric ranging
+
+4. the >> operator returns its left operand
