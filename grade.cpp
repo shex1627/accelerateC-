@@ -1,14 +1,11 @@
-#ifndef GRADE_H_
-#define GRADE_H_
-
 #include <vector>
+#include <stdexcept>
 #include "Student_info.h"
 #include "median.h"
 
-double grade(const Student_info& s) 
-{
-	return grade(s.midterm, s.final, s.hw);
-}
+using std::domain_error;
+
+
 
 double grade(double midterm, double final, double hw)
 {
@@ -17,6 +14,13 @@ double grade(double midterm, double final, double hw)
 
 double grade(double midterm, double final, const std::vector<double>& hw) 
 {
-	if　(hw.size() == 0) 
-			
+	if (hw.size() == 0) {
+		throw domain_error("you didn't input any hw!");
+	}
+	return grade(midterm, final, median(hw));		
+}
+
+double grade(const Student_info& s) 
+{
+	return grade(s.midterm, s.final, s.homework);
 }

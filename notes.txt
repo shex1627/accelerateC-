@@ -2,7 +2,34 @@ chapter5:
 1.iterators
 2.container from the standard library
 
+chapter3:
+typedef:
+allow programmers to define an arbitary type based on an existing type, such as
+typedef int finger_num;
+
+chapter4:
+a function parameter declartion without 'const' usually a signal that 
+we will motify that object
+
+adding a reference to a parameter will make the function not to copy the object again
+(because sometimes the object input is huge)
+
+#ifndef SOME_UNIQUE_IDENTIFIER
+#define SOME_UNIQUE_IDENTIFIER
+..
+#enif 
+//this is used to preseve idemopotent(avoid defining something more than once)
+
 ch6:
 
 ch7:
 using maps(key-value pair)
+############################################################################
+
+-> is a deferencing notation
+if hello is a pointer that points to an object
+instead of (*hello).world()
+we can do  hello->world 
+instead.
+
+
